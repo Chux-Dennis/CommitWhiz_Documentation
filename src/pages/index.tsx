@@ -11,8 +11,9 @@ import styles from './index.module.css';
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
+    <header className={clsx('hero', styles.heroBanner)}>
+      {/* <div className="container">
+
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
         </Heading>
@@ -24,6 +25,18 @@ function HomepageHeader() {
             Docusaurus Tutorial - 5min ⏱️
           </Link>
         </div>
+      </div> */}
+      <div className="container" style={{ 
+        background:`url()`
+      }}>
+
+       <Heading as='h1' className="hero__title ">
+          Coding is Hard 
+        </Heading>
+        <br />
+        <Heading as='h1' className="hero__title">
+          Git Shouldn't
+        </Heading>
       </div>
     </header>
   );
@@ -33,11 +46,11 @@ export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`${siteConfig.title} - Your Git Buddy`}
+      description="commitWhiz simplifies your Git workflow by providing AI generated commit messages">
       <HomepageHeader />
       <main>
-        <HomepageFeatures />
+        {/* <HomepageFeatures /> */}
       </main>
     </Layout>
   );
