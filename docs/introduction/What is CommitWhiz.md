@@ -28,12 +28,12 @@ Think of CommitWhiz as your commit assistant — making sure your messages are n
 
 Instead of :
 
-```bash 
+```bash title="git"
 git commit -m "New Changes"
 ```
 
 With CommitWhiz:
 
-```bash
+```bash title="git"
 git commit -m "fix(auth): resolve token expiry issue"
 ```
