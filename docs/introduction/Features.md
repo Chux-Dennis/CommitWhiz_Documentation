@@ -6,7 +6,7 @@ CommitWhiz looks through changes in your codebase and provides accurate, context
 
 ### AI Refining
 CommitWhiz currently integrates with the
-[Gemini API](https://nodejs.org/en/download/)  for data refining and natural-sounding commit messages.
+[Gemini API](#)  for data refining and natural-sounding commit messages.
 
 ### Local Model Support
 Prefer working offline?

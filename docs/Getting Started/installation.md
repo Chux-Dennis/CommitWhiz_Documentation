@@ -12,9 +12,10 @@ Getting started with CommitWhiz is pretty straightforward and easy.
 
 
 **Prerequisites**
-- [Node](https://nodejs.org)/NPM (Version 16 or higher) installed
+- [Node](https://nodejs.org)/NPM (>= 18) installed
 - Git 
 - Ollama (Optional, If you are using a local model.)
+- A [Gemini](#) API Key (if you are using the AI cloud service)
 
 _Note:You need to have at least 8GB of RAM wth a good processor speed to run a local ollama server perfectly on your machine_
 

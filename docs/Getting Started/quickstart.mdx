@@ -1,0 +1,69 @@
+# Quick Start
+
+Now that you have CommitWhiz installed , what's next??
+
+After CommitWhiz is installed, the ***cwz*** command is used when working with this package.
+
+**To get started , run:**
+
+```bash title="cmd"
+cwz init 
+```
+
+This creates a ***whiz.config.js*** file at the root directory (same level as package.json)
+
+
+```js title="whiz.config.js"
+import {Whiz} from "commitwhiz"
+
+const whizConfig = Whiz.config({
+    key:process.env.GEMINI_API_KEY,
+    useTextEditor:false,
+    autoPush:true,
+    autoPushOptions:{
+      branch:"main",
+      remote:"origin"
+    }
+})
+
+export default whizConfig
+
+```
+
+:::tip Module Compatability
+Your config file will use require/module.exports if your module type is commonjs in your package.json
+:::
+
+You are advised to include your config file in your **.gitgnore**
+
+:::info Typescript Variant
+A typescript variant of the config file would be rolled out in later versions, to ensure language consistency in your development enviornment
+:::
+
+### Adding to staging area
+
+Commitwhiz does not take care of adding to staging area .
+
+```bash title="git"
+git add .
+```
+
+### Whizzing your commits!
+
+
+To get your detailed , meaning commit message with CommitWhiz , you run :
+
+```bash title="cmd"
+cwz commit
+```
+
+You can edit a provided commit message if it does not meet your needs. 
+
+They can be edited with a text editor if ***useTextEditor*** in your config file is true.
+
+
+### Automating your Git Workflow
+
+We believe that you should focus on coding and let CommitWhiz focus on your Git workflow and deployments.
+
+If you have ***autoPush*** and ***autoPushOptions*** (branch & remote) set , after commit is successfull it automatically pushes your code to GitHub.
