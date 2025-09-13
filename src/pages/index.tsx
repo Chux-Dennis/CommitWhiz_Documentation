@@ -9,6 +9,8 @@ import Heading from "@theme/Heading";
 
 import styles from "./index.module.css";
 
+//Home page is currently being redirected to docs page for now.
+
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
