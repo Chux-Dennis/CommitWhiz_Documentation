@@ -85,7 +85,7 @@ const config: Config = {
           position: 'left',
           label: 'Documentation',
         },
-        {to: '/blog', label: 'NPM', position: 'left'},
+        {to: 'https://www.npmjs.com/package/commitwhiz', label: 'NPM', position: 'left'},
         
         {
           href: 'https://github.com/Chux-Dennis/GitWhiz',

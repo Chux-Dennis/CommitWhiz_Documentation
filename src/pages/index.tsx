@@ -1,57 +1,44 @@
-import type {ReactNode} from 'react';
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
-import Heading from '@theme/Heading';
+import { useEffect, type ReactNode } from "react";
+import clsx from "clsx";
+import { useColorMode } from "@docusaurus/theme-common";
+import Link from "@docusaurus/Link";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import Layout from "@theme/Layout";
+import HomepageFeatures from "@site/src/components/HomepageFeatures";
+import Heading from "@theme/Heading";
 
-import styles from './index.module.css';
+import styles from "./index.module.css";
+
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
+  console.log(siteConfig.stylesheets);
+  
   return (
-    <header className={clsx('hero', styles.heroBanner)}>
-      {/* <div className="container">
-
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-        </div>
-      </div> */}
-      <div className="container" style={{ 
-        background:`url()`
-      }}>
-
-       <Heading as='h1' className="hero__title ">
-          Coding is Hard 
-        </Heading>
-        <br />
-        <Heading as='h1' className="hero__title">
-          Git Shouldn't
-        </Heading>
-      </div>
+    <header className={clsx("hero", styles.heroBanner)}>
+      <h1>Commit Like a Pro With <br /> CommitWhiz</h1>
     </header>
   );
 }
 
 export default function Home(): ReactNode {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
+
+
+  useEffect(()=>{
+    window.location.href="/docs/intro"
+  },[])
+
+  return 
+
   return (
     <Layout
       title={`${siteConfig.title} - Your Git Buddy`}
-      description="commitWhiz simplifies your Git workflow by providing AI generated commit messages">
+      description="CommitWhiz simplifies your Git workflow by providing AI generated commit messages"
+    >
+       
       <HomepageHeader />
-      <main>
-        {/* <HomepageFeatures /> */}
-      </main>
+      <main>{/* <HomepageFeatures /> */}</main>
     </Layout>
   );
 }
