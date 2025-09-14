@@ -28,7 +28,7 @@ export default function Home(): ReactNode {
 
 
   useEffect(()=>{
-    window.location.href="/docs/intro"
+    window.location.href="/docs/category/intoduction"
   },[])
 
   return 
